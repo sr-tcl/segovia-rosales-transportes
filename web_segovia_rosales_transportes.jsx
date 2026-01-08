@@ -26,13 +26,13 @@
     .card span{ display:block; font-size:40px; margin-bottom:15px; color:var(--rojo); }
 
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .gallery div { background:var(--gris); height:200px; display:flex; align-items:center; justify-content:center; color:#777; border-radius:14px; font-size:16px; border:2px dashed #ccc; }
-.gallery img{
+    .gallery img{
   width:100%;
   height:200px;
   object-fit:cover;
   border-radius:14px;
 }
+
     .contact { background:var(--gris); text-align:center; }
     .contact p{ font-size:18px; line-height:1.8; }
 
@@ -71,10 +71,10 @@
 <section>
   <h2>Galería de trabajos</h2>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7" alt="Camión de transporte">
-    <img src="https://images.unsplash.com/photo-1597008641621-bd3c3a3a8f7b" alt="Mudanza">
-    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" alt="Carga logística">
-    <img src="https://images.unsplash.com/photo-1603570417594-4a0c5c4dff4a" alt="Transporte de carga">
+    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80" alt="Camión de transporte">
+    <img src="https://images.unsplash.com/photo-1597008641621-bd3c3a3a8f7b?auto=format&fit=crop&w=800&q=80" alt="Mudanza">
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Carga logística">
+    <img src="https://images.unsplash.com/photo-1603570417594-4a0c5c4dff4a?auto=format&fit=crop&w=800&q=80" alt="Transporte de carga">
   </div>
 </section>
 
