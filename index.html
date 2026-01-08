@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segovia Rosales Transportes</title>
+  <style>
+    :root{
+      --negro:#000000;
+      --rojo:#C40000;
+      --gris:#f2f2f2;
+    }
+    body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; color:#111; background:#fff; }
+    header { background:var(--negro); color:#fff; padding:60px 20px; }
+    .header-content{ max-width:1100px; margin:auto; display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:30px; }
+    header img{ max-width:260px; }
+    header h1 { margin:0; font-size:40px; }
+    header p { font-size:20px; margin:15px 0 25px; }
+    .btn-whatsapp { background:#25D366; color:#fff; padding:15px 28px; text-decoration:none; font-weight:bold; border-radius:6px; }
+
+    section { padding:70px 20px; max-width:1100px; margin:auto; }
+    h2 { text-align:center; margin-bottom:50px; font-size:32px; }
+
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
+    .card { border:1px solid #ddd; padding:35px 25px; border-radius:14px; text-align:center; font-size:18px; }
+    .card span{ display:block; font-size:40px; margin-bottom:15px; color:var(--rojo); }
+
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .gallery div { background:var(--gris); height:200px; display:flex; align-items:center; justify-content:center; color:#777; border-radius:14px; font-size:16px; border:2px dashed #ccc; }
+
+    .contact { background:var(--gris); text-align:center; }
+    .contact p{ font-size:18px; line-height:1.8; }
+
+    footer { background:var(--negro); color:#fff; text-align:center; padding:25px; font-size:14px; }
+
+    .fixed-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:16px 18px; border-radius:50%; font-size:22px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,.3); }
+
+    @media(max-width:768px){
+      .header-content{ grid-template-columns:1fr; text-align:center; }
+      header img{ margin:auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="logo-srt.png" alt="Segovia Rosales Transportes" />
+    <div>
+      <h1>Segovia Rosales Transportes</h1>
+      <p>Transporte, fletes y mudanzas profesionales</p>
+      <a class="btn-whatsapp" href="https://wa.me/56920205169" target="_blank">Cotizar por WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Nuestros Servicios</h2>
+  <div class="services">
+    <div class="card"><span>🚚</span>Transporte de carga</div>
+    <div class="card"><span>📦</span>Fletes</div>
+    <div class="card"><span>🏠</span>Mudanzas</div>
+  </div>
+</section>
+
+<section>
+  <h2>Galería de trabajos</h2>
+  <div class="gallery">
+    <div>Foto camión</div>
+    <div>Trabajo de mudanza</div>
+    <div>Carga en ruta</div>
+    <div>Servicio realizado</div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contacto</h2>
+  <p>
+    📞 +56 9 2020 5169<br/>
+    ✉️ srtransportescl@gmail.com<br/>
+    📷 Instagram: <strong>@SR_T.CL</strong>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Segovia Rosales Transportes · Todos los derechos reservados</p>
+</footer>
+
+<a class="fixed-whatsapp" href="https://wa.me/56920205169" target="_blank">💬</a>
+
+</body>
+</html>
