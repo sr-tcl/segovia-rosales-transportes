@@ -1,92 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Segovia Rosales Transportes</title>
+
   <style>
     :root{
       --negro:#000000;
-      --rojo:#C40000;
+      --rojo:#c40000;
       --gris:#f2f2f2;
+      --verde:#25D366;
     }
-    body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; color:#111; background:#fff; }
-    header { background:var(--negro); color:#fff; padding:60px 20px; }
-    .header-content{ max-width:1100px; margin:auto; display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:30px; }
-    header img{ max-width:260px; height:auto; filter: brightness(0) invert(1); }
-    header h1 { margin:0; font-size:40px; }
-    header p { font-size:20px; margin:15px 0 25px; }
-    .btn-whatsapp { background:#25D366; color:#fff; padding:15px 28px; text-decoration:none; font-weight:bold; border-radius:6px; }
 
-    section { padding:70px 20px; max-width:1100px; margin:auto; }
-    h2 { text-align:center; margin-bottom:50px; font-size:32px; }
+    *{
+      box-sizing:border-box;
+    }
 
-    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
-    .card { border:1px solid #ddd; padding:35px 25px; border-radius:14px; text-align:center; font-size:18px; }
-    .card span{ display:block; font-size:40px; margin-bottom:15px; color:var(--rojo); }
+    body{
+      margin:0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color:#111;
+      background:#fff;
+      line-height:1.5;
+    }
 
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .gallery div { background:var(--gris); height:200px; display:flex; align-items:center; justify-content:center; color:#777; border-radius:14px; font-size:16px; border:2px dashed #ccc; }
+    /* ================= HERO PREMIUM ================= */
 
-    .contact { background:var(--gris); text-align:center; }
-    .contact p{ font-size:18px; line-height:1.8; }
+    .hero{
+      position:relative;
+      min-height:100vh;
+      background-image:url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80");
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+    }
 
-    footer { background:var(--negro); color:#fff; text-align:center; padding:25px; font-size:14px; }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.65);
+    }
 
-    .fixed-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:16px 18px; border-radius:50%; font-size:22px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,.3); }
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:1100px;
+      margin:auto;
+      padding:80px 20px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:40px;
+    }
 
-    @media(max-width:768px){
-      .header-content{ grid-template-columns:1fr; text-align:center; }
-      header img{ margin:auto; }
+    .hero img{
+      max-width:220px;
+      height:auto;
+    }
+
+    .hero h1{
+      margin:0 0 15px;
+      font-size:42px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:18px;
+      margin:0 0 25px;
+      max-width:520px;
+    }
+
+    .btn-whatsapp{
+      display:inline-block;
+      background:var(--verde);
+      color:#fff;
+      padding:14px 26px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* ================= SECCIONES ================= */
+
+    section{
+      padding:70px 20px;
+    }
+
+    section h2{
+      text-align:center;
+      font-size:32px;
+      margin-bottom:40px;
+    }
+
+    .services{
+      background:var(--gris);
+    }
+
+    .services-grid{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .card{
+      background:#fff;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+
+    .card h3{
+      margin-top:0;
+      color:var(--negro);
+    }
+
+    .coverage{
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+      font-size:18px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:900px){
+      .hero-content{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero img{
+        margin:auto;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .services-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <div class="header-content">
-    <img src="logo-srt.png" alt="Segovia Rosales Transportes" />
-    <div>
-      <h1>Segovia Rosales Transportes</h1>
-      <p>Transporte, fletes y mudanzas profesionales</p>
-      <a class="btn-whatsapp" href="https://wa.me/56920205169" target="_blank">Cotizar por WhatsApp</a>
+  <!-- HERO PREMIUM -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="logo-srt.png" alt="Segovia Rosales Transportes">
+
+      <div>
+        <h1>Segovia Rosales Transportes</h1>
+        <p>
+          Transporte, fletes y mudanzas profesionales.<br>
+          Operación confiable desde Santiago hacia el norte del país,
+          con soluciones logísticas escalables y responsables.
+        </p>
+
+        <a class="btn-whatsapp"
+           href="https://wa.me/56920205169?text=Hola%20quiero%20cotizar%20un%20servicio%20de%20transporte%20con%20Segovia%20Rosales%20Transportes"
+           target="_blank">
+          Cotizar por WhatsApp
+        </a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section>
-  <h2>Nuestros Servicios</h2>
-  <div class="services">
-    <div class="card"><span>🚚</span>Transporte de carga</div>
-    <div class="card"><span>📦</span>Fletes</div>
-    <div class="card"><span>🏠</span>Mudanzas</div>
-  </div>
-</section>
+  <!-- SERVICIOS -->
+  <section class="services">
+    <h2>Nuestros Servicios</h2>
 
-<section>
-  <h2>Galería de trabajos</h2>
-  <div class="gallery">
-    <div>Foto camión</div>
-    <div>Trabajo de mudanza</div>
-    <div>Carga en ruta</div>
-    <div>Servicio realizado</div>
-  </div>
-</section>
+    <div class="services-grid">
+      <div class="card">
+        <h3>Fletes y Mudanzas</h3>
+        <p>
+          Servicios urbanos y regionales con vehículos livianos y medianos,
+          ideales para mudanzas, repartos y fletes programados.
+        </p>
+      </div>
 
-<section class="contact">
-  <h2>Contacto</h2>
-  <p>
-    📞 +56 9 2020 5169<br/>
-    ✉️ srtransportescl@gmail.com<br/>
-    📷 Instagram: <strong>@SR_T.CL</strong>
-  </p>
-</section>
+      <div class="card">
+        <h3>Transporte de Carga</h3>
+        <p>
+          Transporte de carga general y paletizada, con foco en seguridad,
+          orden y cumplimiento de plazos.
+        </p>
+      </div>
 
-<footer>
-  <p>© 2026 Segovia Rosales Transportes · Todos los derechos reservados</p>
-</footer>
+      <div class="card">
+        <h3>Carga Pesada y Rutas Largas</h3>
+        <p>
+          Transporte de carga pesada hasta 15.000 kg mediante flota propia
+          y alianzas estratégicas hacia el norte del país.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<a class="fixed-whatsapp" href="https://wa.me/56920205169" target="_blank">💬</a>
+  <!-- COBERTURA -->
+  <section>
+    <h2>Cobertura</h2>
+    <div class="coverage">
+      Operamos en Santiago y la zona centro del país, con cobertura extendida
+      hacia el norte, incluyendo rutas a Vallenar y Calama, gracias a nuestra
+      red logística y alianzas estratégicas.
+    </div>
+  </section>
 
 </body>
 </html>
